@@ -15638,35 +15638,6 @@ prebuilt_rfsa {
 }
 
 cc_prebuilt_library_shared {
-    name: "libUahPerf_Jni",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libUahPerf_Jni.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libandroid",
-                "libandroid_runtime",
-                "liblog",
-                "liboplus-uah-client",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libdiag_system",
     owner: "oneplus",
     strip: {
@@ -15824,35 +15795,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liboplus-uah-client",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/liboplus-uah-client.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -17305,36 +17247,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liboplus-uah-client",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/liboplus-uah-client.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder_ndk",
-                "libbinder",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "liboplus_service",
     owner: "oneplus",
     strip: {
@@ -17555,73 +17467,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "vendor.oplus.hardware.displaycolorfeature-V1-ndk",
                 "libdisplayfossfeature_nature",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libuahcore",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libuahcore.so",
-            ],
-            shared_libs: [
-                "libthermalclient",
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libprotobuf-cpp-lite-21.12-vendorcompat",
-                "libxml2",
-                "libcrypto",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liburcccore",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/liburcccore.so",
-            ],
-            shared_libs: [
-                "android.frameworks.stats-V1-ndk",
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libxml2",
-                "libbinder_ndk",
-                "libutils",
-                "libcrypto",
-                "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "libc++",
                 "libc",
                 "libm",
@@ -18369,15 +18214,6 @@ prebuilt_etc_xml {
     name: "manifest_touch_aidl.xml",
     owner: "oneplus",
     src: "proprietary/odm/etc/vintf/manifest/manifest_touch_aidl.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    device_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.oplus.hardware.urcc-service.xml",
-    owner: "oneplus",
-    src: "proprietary/odm/etc/vintf/manifest/vendor.oplus.hardware.urcc-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     device_specific: true,
@@ -21272,37 +21108,6 @@ cc_prebuilt_binary {
                 "libhardware",
                 "vendor.oplus.hardware.displaypanelfeature-V1-ndk",
                 "libjsoncpp",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    device_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.oplus.hardware.urcc-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/bin/hw/vendor.oplus.hardware.urcc-service",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.urcc-V1-ndk",
-                "libbase",
-                "liblog",
-                "libcutils",
-                "libbinder_ndk",
-                "libcrypto",
                 "libc++",
                 "libc",
                 "libm",
