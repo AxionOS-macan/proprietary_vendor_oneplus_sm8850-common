@@ -15837,8 +15837,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liboplus-uah-client_system_ext",
-    stem: "liboplus-uah-client",
+    name: "liboplus-uah-client",
     owner: "oneplus",
     strip: {
         none: true,
@@ -17623,32 +17622,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcrypto",
                 "libprotobuf-cpp-lite-21.12-vendorcompat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.urcc-V1-ndk_odm",
-    stem: "vendor.oplus.hardware.urcc-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.urcc-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",

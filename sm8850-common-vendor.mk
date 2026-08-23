@@ -904,7 +904,7 @@ PRODUCT_PACKAGES += \
     libmmparser_lite \
     libmmrtpdecoder \
     libmmrtpencoder \
-    liboplus-uah-client_system_ext \
+    liboplus-uah-client \
     libostatslog \
     libqcc \
     libqcc_file_agent_sys \
@@ -959,7 +959,6 @@ PRODUCT_PACKAGES += \
     libstc_color_feature \
     libuahcore \
     liburcccore \
-    vendor.oplus.hardware.urcc-V1-ndk_odm \
     vendor.pixelworks.hardware.display@1.0 \
     vendor.pixelworks.hardware.display@1.1 \
     vendor.pixelworks.hardware.display@1.2 \
